@@ -1,3 +1,5 @@
 (fp_lib_table
-  (lib (name "kicad-keyboard-parts")(type "KiCad")(uri "${KIPRJMOD}/../")(options "")(descr ""))
+  (version 7)
+  (lib (name "kiboard_cache")(type "KiCad")(uri "/home/fabio/programs/keyboards/kiboard_cache.pretty")(options "")(descr ""))
+  (lib (name "footprints")(type "KiCad")(uri "/home/fabio/programs/keyboards/fabikb/footprints")(options "")(descr ""))
 )
