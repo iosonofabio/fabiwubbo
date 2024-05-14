@@ -37,9 +37,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 0.0,
+          "height": 2.6,
+          "width": 2.6
         },
         "silk_line_width": 0.12,
         "silk_text_italic": false,
@@ -49,11 +49,22 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.508
+          "min_clearance": 0.35
         }
       },
-      "diff_pair_dimensions": [],
-      "drc_exclusions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
+      "drc_exclusions": [
+        "courtyards_overlap|113640001|-15629999|63489ebf-0f52-43a6-a0ab-158b1a7d4988|e43299f0-2eea-47f9-be5b-2a309c38271d",
+        "courtyards_overlap|116079256|-40688078|8842a1fb-2e11-4100-86f1-f231b5825aca|9784dbc3-8aaa-433b-bdf3-3aab9db0333c",
+        "courtyards_overlap|116576668|-15629999|1f1dc877-213b-4e4d-b534-6b79b59a4122|e43299f0-2eea-47f9-be5b-2a309c38271d",
+        "courtyards_overlap|121379806|-28589999|ce297cc5-ba1e-4bda-a461-cbd362d40e6f|d9bd50c5-028a-493a-8ac9-2dcf6441d81b"
+      ],
       "meta": {
         "version": 2
       },
@@ -81,7 +92,7 @@
         "length_out_of_range": "error",
         "lib_footprint_issues": "warning",
         "lib_footprint_mismatch": "warning",
-        "malformed_courtyard": "error",
+        "malformed_courtyard": "warning",
         "microvia_drill_out_of_range": "error",
         "missing_courtyard": "ignore",
         "missing_footprint": "warning",
@@ -100,7 +111,7 @@
         "text_thickness": "warning",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
-        "track_dangling": "warning",
+        "track_dangling": "error",
         "track_width": "error",
         "tracks_crossing": "error",
         "unconnected_items": "error",
@@ -113,19 +124,19 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.0,
+        "min_clearance": 0.127,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.01,
-        "min_hole_clearance": 0.25,
-        "min_hole_to_hole": 0.25,
+        "min_copper_edge_clearance": 0.35,
+        "min_hole_clearance": 0.254,
+        "min_hole_to_hole": 0.254,
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1,
         "min_resolved_spokes": 2,
         "min_silk_clearance": 0.0,
         "min_text_height": 0.8,
-        "min_text_thickness": 0.08,
-        "min_through_hole_diameter": 0.3,
-        "min_track_width": 0.2,
+        "min_text_thickness": 0.12,
+        "min_through_hole_diameter": 0.2,
+        "min_track_width": 0.127,
         "min_via_annular_width": 0.05,
         "min_via_diameter": 0.4,
         "solder_mask_to_copper_clearance": 0.0,
@@ -174,7 +185,9 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -201,7 +214,16 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.4,
+          "drill": 0.2
+        }
+      ],
       "zones_allow_external_fillets": false,
       "zones_use_no_outline": true
     },
@@ -397,6 +419,7 @@
     "rule_severities": {
       "bus_definition_conflict": "error",
       "bus_entry_needed": "error",
+      "bus_label_syntax": "error",
       "bus_to_bus_conflict": "error",
       "bus_to_net_conflict": "error",
       "conflicting_netclasses": "error",
@@ -435,14 +458,14 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "Bottom_Plate.kicad_pro",
+    "filename": "Bottom_Plate_fabiWubbo.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
+        "clearance": 0.13,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -452,7 +475,24 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 0.13,
+        "via_diameter": 0.4,
+        "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -463,7 +503,28 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Power",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "+BATT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/BAT+_SWITCHED"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/V-IN"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VBUS"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {
@@ -475,7 +536,7 @@
       "specctra_dsn": "",
       "step": "",
       "svg": "",
-      "vrml": ""
+      "vrml": "Wubbo.wrl"
     },
     "page_layout_descr_file": ""
   },
@@ -566,8 +627,18 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "fix_passive_vals": false,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 0,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
+    "spice_adjust_passive_values": false,
     "spice_current_sheet_as_root": false,
     "spice_external_command": "spice \"%I\"",
     "spice_model_current_sheet_as_root": true,
@@ -577,6 +648,11 @@
     "subpart_first_id": 65,
     "subpart_id_separator": 0
   },
-  "sheets": [],
+  "sheets": [
+    [
+      "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+      "Root"
+    ]
+  ],
   "text_variables": {}
 }
